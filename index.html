@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Booki</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial scale=1.0, user-scalable=yes" />
+        <link rel="stylesheet" href="css/normalize.css" type="text/css" />
+        <link rel="stylesheet" href="css/stylesheet.css" type="text/css" />
+        <!--Is this is FontAwesome-->
+        <script src="https://kit.fontawesome.com/67673b6d3e.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+        <!--Is this is FontAwesome and BootstrapCDN?-->
+        <!--Importer les css dans le bon ordre???-->
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+                <img src="images/logo/Booki.png" alt="le logo du site" id="Booki"/>
+                <nav id="navigation">
+                    <a href="#" class="navigation">Hébergements</a>
+                    <a href="#" class="navigation">Activités</a>
+                </nav>
+            </div>
+            <div>
+                <h1>Trouvez votre hébergement pour des vacances de rêves</h1>
+                <p>En plein centre ville ou en pleine nature</p>
+                <form method="post" action="traitement.php" id="search_block">
+                    <div id="icon" class="flexCentre">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div id="searchline">
+                        <input type="search" name="location" id="location" placeholder="Marseille, France" />  
+                    </div>
+                    <div>
+                        <label for="location" id="search"><a href="#">Rechercher</a></label>
+                        <i class="fa-solid fa-magnifying-glass" id="icon_glass"></i>
+                    </div>
+                </form>
+            </div>
+        </header>
+    </body>
+</html>
