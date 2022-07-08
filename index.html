@@ -10,7 +10,7 @@
         <script src="https://kit.fontawesome.com/67673b6d3e.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
         <!--Is this is FontAwesome and BootstrapCDN?-->
-        <!--Importer les css dans le bon ordre???-->
+        <!--Import css in the right order-->
     </head>
     <body>
         <header>
@@ -31,41 +31,34 @@
                     <div id="searchline">
                         <input type="search" name="location" id="location" placeholder="Marseille, France" />  
                     </div>
-                    <div>
-                        <label for="location" id="search"><a href="#">Rechercher</a></label>
+                    <div  id="search">
+                        <label for="location"><a href="#">Rechercher</a></label>
                         <i class="fa-solid fa-magnifying-glass" id="icon_glass"></i>
                     </div>
+                    <!--Do a mix of class and id is a good idea?-->
                 </form>
             </div>
-            <div>
+            <section class="filters">
                 <p>Filtres</p>
-                <ul>
-                    <li>
-                        <div>
-                            <i class="fa-solid fa-money-bill-wave"></i>
-                            <button type="button">Economique</button>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <i class="fa-solid fa-child-reaching"></i>
-                            <button type="button">Familial</button>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <i class="fa-solid fa-heart"></i>
-                            <button type="button">Romantique</button>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <i class="fa-solid fa-dog"></i>
-                            <button type="button">Animaux autorisés</button>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+                <!--Is a list with <ul> a good idea?-->
+                <!--KISS-->   
+                <div class="buttonFilters">
+                    <i class="fa-solid fa-money-bill-wave"></i>
+                    <button type="button">Economique</button>
+                </div>
+                 <div class="buttonFilters">
+                    <i class="fa-solid fa-child-reaching"></i>
+                    <button type="button">Familial</button>
+                </div>     
+                <div class="buttonFilters">
+                    <i class="fa-solid fa-heart"></i>
+                    <button type="button">Romantique</button>
+                </div class="buttonFilters">
+                <div class="buttonFilters">
+                    <i class="fa-solid fa-dog"></i>
+                    <button type="button">Animaux autorisés</button>
+                </div>
+            </section>
         </header>
     </body>
 </html>
