@@ -114,24 +114,24 @@ h1
 /*Filters*/
 
 .filters{
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
-    align-items: baseline;
 }
-
-
-
 .buttonFilters{
     display: flex;
-    align-items: baseline;
-
+    margin-left: 15px;
+    border: 5px solid #F2F2F2;
+    border-radius: 50px;
 }
-
 .buttonFilters i{
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50px;
     height: 50px;
     background-color: #DEEBFF;
+    border-radius: 100%;
 }
 .buttonFilters button{
     height: 50px;
