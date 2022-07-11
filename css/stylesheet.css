@@ -136,13 +136,22 @@ h1
     height: 52px;
     background-color: #DEEBFF;
     color: #0065FC;
-    border-radius: 100%;
+    border-radius: 25px;
 }
 .buttonFilters button{
     height: 50px;
     border: none;
     border-radius: 100%;/*button force me to put a radius and a background-color, is it better to put a <div> rather than a <button> tag?*/
     background-color: white;
+}
+[class*="fa-info"]{
+    width: 20px;
+    height: 20px;
+    border: 2px solid #DEEBFF;
+    color:#0065FC;
+    text-align: center;
+    border-radius: 25px;
+    margin-right: 10px;
 }
 
 
