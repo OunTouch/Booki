@@ -78,13 +78,16 @@ h1
 
 
 
-#searchline
+#location
 {
     height: 50px;
     width: 230px;
     font-size: 18px;
     color: black;
     font-weight: bold;
+    outline:none;
+    padding-left: 10px;
+    border: #F2F2F2 2px solid;
 }
 
 
@@ -121,21 +124,25 @@ h1
 .buttonFilters{
     display: flex;
     margin-left: 15px;
-    border: 5px solid #F2F2F2;
-    border-radius: 50px;
+    border: 2px solid #DEEBFF;
+    border-radius: 30px;
+    width: fit-content;
 }
 .buttonFilters i{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 52px;
+    height: 52px;
     background-color: #DEEBFF;
+    color: #0065FC;
     border-radius: 100%;
 }
 .buttonFilters button{
     height: 50px;
-    background-color: red;
+    border: none;
+    border-radius: 100%;/*button force me to put a radius and a background-color, is it better to put a <div> rather than a <button> tag?*/
+    background-color: white;
 }
 
 
@@ -165,5 +172,10 @@ h1
     #icon_glass
     {
         display: inline;
+        color: white;
+    }
+    .filters{
+        display: flex;
+        flex-direction: column;
     }
 }
