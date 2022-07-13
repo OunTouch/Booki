@@ -45,8 +45,23 @@ body
 }
 header nav{
     display: flex;
+    height: inherit;
+
 }
-header nav 
+header nav div{
+    width: 150px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+header nav div:hover{
+    border-top: 1px solid #0065FC;
+}
+header nav div a{
+    text-decoration: none;
+}
 h1{
     font-size: 25px;
 }
@@ -93,48 +108,50 @@ h1{
 
 /*Filters*/
 
-.filters{
-    margin-top: 40px;
+.filtres{
+    margin-top: 30px;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
 }
-.buttonFilters{
+.bouttons{
     display: flex;
+    align-items: center;
     margin-left: 15px;
-    border: 2px solid #DEEBFF;
+    height: 50px;
+    border: 2px solid #F2F2F2;
     border-radius: 30px;
-    width: fit-content;
 }
-.buttonFilters i{
+.bouttons i{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 52px;
-    height: 52px;
+    width: 50px;
+    height: 50px;
     background-color: #DEEBFF;
     color: #0065FC;
-    border-radius: 25px;
+    border-radius: 100%;
 }
-.buttonFilters button{
-    height: 50px;
+.bouttons button{
     border: none;
-    border-radius: 100%;/*il vaut mieux un <button> oun une <div>?*/
-    background-color: white;
+    background-color: white;/*il vaut mieux un <button> oun une <div>?*/
+    margin: 0 15px;
 }
-.filters div:hover{
+.filtres div:hover{
     text-decoration: line-through;
 }
+header p{
+    display: flex;
+}
 [class*="fa-info"]{
-    width: 20px;
-    height: 20px;
-    border: 2px solid #DEEBFF;
     color:#0065FC;
-    text-align: center;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #DEEBFF;
     border-radius: 25px;
-    margin-right: 10px;
 }
 
-/*Hébergements à Marseill*/
+/*Hébergements à Marseille*/
 
 .Hebergements_marseille{
     display: flex;
@@ -151,6 +168,7 @@ h1{
 .Hebergements_marseille article{
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
 }
 .Hebergements_marseille div{
     background-color: white;
@@ -163,18 +181,16 @@ h1{
 
 @media screen and (max-width: 768px)
 {
-    #header{
-        overflow: auto;
+    body{
+        margin: 0 5%;
     }
     #logo
     {
         display:flex;
         flex-direction: column;
     }
-
-    #Booki
-    {
-        background-color: red;
+    header h2{
+        width: 100%;
     }
 
     #icone_loupe
@@ -183,6 +199,10 @@ h1{
         color: white;
     }
     .filters{
+        display: flex;
+        flex-direction: column;
+    }
+    .Hebergements_marseille article{
         display: flex;
         flex-direction: column;
     }
