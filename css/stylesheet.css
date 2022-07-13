@@ -1,18 +1,21 @@
 /** Déclarations **/
 
-/* Add box-sizing propertie to all elements*/
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+/* Ajouter border-box à tous les éléments*/
 
 @font-face {
     font-family: "Raleway";
     src: url(Raleway-VariableFont_wght.ttf) format("truetype");
 }
 
-/*Do the fonts need to be all declarated, example Arial, Trebuchet and PatinCoufin?*/
+/*il faut déclarer toutes les polices, example Arial, Trebuchet et PatinCoufin?*/
 
 
 /*Classes générales*/
 
-.flexCentre
+.flexCentre/*est-ce que ça vaut le coup de créer des classes comme ceci?*/
 {
     display: flex;
     justify-content: center;
@@ -27,59 +30,40 @@
 body
 {
     font-family: "Raleway", "Arial", "Comic Sans MS", "Trebuchet MS", "sans-serif";
-    margin: 5% 10%;
+    margin: 0 10%;
     width: 80%;
     min-width: 448px;
 }
 
 /*Header*/
 
-#logo
-{
+#logo{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100px;
 }
-
-.navigation
-{
-    margin-right: 30px;
-    text-decoration: none;
+header nav{
+    display: flex;
 }
-
-nav a:hover
-{
-    color: #0065FC;
-}
-
-h1
-{
+header nav 
+h1{
     font-size: 25px;
 }
-
-#search_block
-{
+#barre_de_recherche{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     width: 400px;
     border-radius: 10px;
 }
-
-
-
-#icon
-{
+#icon{
     height: 50px;
     width: 50px;
     background-color: #F2F2F2;
     border-radius: 5px 0 0 5px;
 }
-
-
-
-#location
-{
+#location{
     height: 50px;
     width: 230px;
     font-size: 18px;
@@ -89,10 +73,7 @@ h1
     padding-left: 10px;
     border: #F2F2F2 2px solid;
 }
-
-
-#search
-{
+#search{
     width: 120px;
     height: 50px;
     border-radius: 0 5px 5px 0;
@@ -101,23 +82,19 @@ h1
     justify-content: center;
     align-items: center;
 }
-
-#search a
-{
+#search a{
     text-decoration: none;
     color: white;
     font-size: 18px;
 }
-
-#icon_glass
-{
+#icone_loupe{
     display: none;
 }
 
 /*Filters*/
 
 .filters{
-    margin-top: 50px;
+    margin-top: 40px;
     display: flex;
     flex-direction: row;
 }
@@ -141,8 +118,11 @@ h1
 .buttonFilters button{
     height: 50px;
     border: none;
-    border-radius: 100%;/*button force me to put a radius and a background-color, is it better to put a <div> rather than a <button> tag?*/
+    border-radius: 100%;/*il vaut mieux un <button> oun une <div>?*/
     background-color: white;
+}
+.filters div:hover{
+    text-decoration: line-through;
 }
 [class*="fa-info"]{
     width: 20px;
@@ -154,16 +134,42 @@ h1
     margin-right: 10px;
 }
 
+/*Hébergements à Marseill*/
+
+.Hebergements_marseille{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    width: 65%;
+}
+.Hebergements_marseille img{
+    width: 150px;
+    height: 90px;
+}
+.Hebergements_marseille article{
+    display: flex;
+    justify-content: space-between;
+}
+.Hebergements_marseille div{
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px 5px 0 0;
+    margin: 5px;
+}
 
 /*Responsive*/
 
 @media screen and (max-width: 768px)
 {
+    #header{
+        overflow: auto;
+    }
     #logo
     {
         display:flex;
         flex-direction: column;
-        justify-content: center;
     }
 
     #Booki
@@ -171,14 +177,7 @@ h1
         background-color: red;
     }
 
-    #navigation
-    {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    #icon_glass
+    #icone_loupe
     {
         display: inline;
         color: white;
