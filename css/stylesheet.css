@@ -13,72 +13,64 @@
 /*il faut déclarer toutes les polices, example Arial, Trebuchet et PatinCoufin?*/
 
 
-/*Classes générales*/
-
-.flexCentre/*est-ce que ça vaut le coup de créer des classes comme ceci?*/
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-/*Classes générales*/
-
-
 body
 {
     font-family: "Raleway", "Arial", "Comic Sans MS", "Trebuchet MS", "sans-serif";
-    margin: 0 10%;
-    width: 80%;
+    margin: 0 5%;
+    width: 90%;
     min-width: 448px;
 }
 
 /*Header*/
 
-#logo{
+.header_logo{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 50px;
+}
+.header_logo_image{
+    width: 70px;
+    height: 60px;
 }
 header nav{
     display: flex;
-    height: inherit;
+    height: 50px;
 
 }
-header nav div{
+header nav a{
     width: 150px;
-    height: 100px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
-}
-header nav div:hover{
-    border-top: 1px solid #0065FC;
-}
-header nav div a{
     text-decoration: none;
 }
-h1{
+header nav a:hover{
+    border-top: 1px solid #0065FC;
+}
+
+header h1{
     font-size: 25px;
 }
-#barre_de_recherche{
+.header_searchbar{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     width: 400px;
+    height: auto;
     border-radius: 10px;
 }
-#icon{
+.header_searchbar_icon{
     height: 50px;
     width: 50px;
     background-color: #F2F2F2;
     border-radius: 5px 0 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#location{
+.header_searchbar_location{
     height: 50px;
     width: 230px;
     font-size: 18px;
@@ -88,7 +80,7 @@ h1{
     padding-left: 10px;
     border: #F2F2F2 2px solid;
 }
-#search{
+.header_searchbar_search{
     width: 120px;
     height: 50px;
     border-radius: 0 5px 5px 0;
@@ -97,24 +89,23 @@ h1{
     justify-content: center;
     align-items: center;
 }
-#search a{
+.header_searchbar_search a{
     text-decoration: none;
     color: white;
     font-size: 18px;
 }
-#icone_loupe{
+.header__searchbar_iconGlass{
     display: none;
 }
 
 /*Filters*/
 
-.filtres{
-    margin-top: 30px;
+.header_filters{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
-.bouttons{
+.header_buttons{
     display: flex;
     align-items: center;
     margin-left: 15px;
@@ -122,7 +113,7 @@ h1{
     border: 2px solid #F2F2F2;
     border-radius: 30px;
 }
-.bouttons i{
+.header_buttons i{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -132,28 +123,40 @@ h1{
     color: #0065FC;
     border-radius: 100%;
 }
-.bouttons button{
+.header_buttons button{
     border: none;
     background-color: white;/*il vaut mieux un <button> oun une <div>?*/
     margin: 0 15px;
 }
-.filtres div:hover{
+.header_filters div:hover{
     text-decoration: line-through;
 }
-header p{
+
+/*infos*/
+
+.header_info{
     display: flex;
+    align-items: baseline;
+}
+.header_info_icon{
+    width: 25px;
+    height: 25px;
+    border: 2px solid #DEEBFF;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
 }
 [class*="fa-info"]{
     color:#0065FC;
-    width: 30px;
-    height: 30px;
-    border: 2px solid #DEEBFF;
-    border-radius: 25px;
 }
+
+
 
 /*Hébergements à Marseille*/
 
-.Hebergements_marseille{
+.main_hotelsMarseille{
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -161,49 +164,134 @@ header p{
     border-radius: 10px;
     width: 65%;
 }
-.Hebergements_marseille img{
-    width: 150px;
-    height: 90px;
-}
-.Hebergements_marseille article{
+.main_hotelsMarseille article{
     display: flex;
-    justify-content: space-between;
-    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
-.Hebergements_marseille div{
+.main_hotelsMarseille_card{
     background-color: white;
-    padding: 5px;
-    border-radius: 5px 5px 0 0;
+    border-radius: 20px;
+    box-shadow: 6px -6px 6px rgb(140, 143, 131);
     margin: 5px;
+    width: 300px;
+    height: auto;
+    padding: 1%;
 }
-
+/*.main_hotelsMarseille_card_img_cannebiere{
+    background-image: url(../images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg);
+}*/
+.main_hotelsMarseille_card_img_port{
+    background-image: url(../images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg);
+}
+.main_hotelsMarseille_card_img_mouettes{
+    background-image: url(../images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg);
+}
+.main_hotelsMarseille_card_img_mer{
+    background-image: url(../images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg);
+}
+.main_hotelsMarseille_card_img_panier{
+    background-image: url(../images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg);
+}
+.main_hotelsMarseille_card_img_amina{
+    background-image: url(../images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg);
+}
+/*insertion img avec la propriété object-fit*/
+.main_hotelsMarseille img{
+    object-fit: cover;
+    object-position: center;
+    width:100%;
+    height:120px;
+    border-radius: 15px 15px 0 0;
+}
+/*insertion img avec la propriété background-image*/
+.main_hotelsMarseille_card_img{
+    width: 100%;
+    height: 120px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px 15px 0 0;
+}
+.main_hotelsMarseille_card figcaption{
+    padding-left: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.main_hotelsMarseille_card p{
+    padding-left: 5px;
+}
+[class*="fa-star"]{
+    padding-left: 5px;
+    color: #0065FC;
+}
+.main_hotelsMarseille_card :last-child :not([class*="fa-euro-sign"]){
+    color: #F2F2F2;
+}
 /*Responsive*/
 
 @media screen and (max-width: 768px)
 {
+    /*body*/
     body{
-        margin: 0 5%;
+        margin: 0;
+        width: 100%;
     }
-    #logo
-    {
+    /*body*/
+
+    /*header*/
+    .header_text{
+        padding: 0 5%;
+    }
+    .header_logo{
         display:flex;
         flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+    header nav{
+        width: 100%;
+    }
+    header nav a{
+        width:50%;
+    }
+    header nav a:hover{
+        border-top: none;
+        border-bottom: 1px solid #0065FC;
+    }
+    .header_searchbar_search{
+        width: 50px;
+    }
+    .header_searchbar_search a{
+        display: none;
+    }
+    .header__searchbar_iconGlass{
+        display: inline;
+        color: white;
+    }
+    .header_filters{
+        padding: 0 5%;
     }
     header h2{
         width: 100%;
     }
+    .header_buttons{
+        margin-top: 7px;
+    }
+    .header_info{
+        padding: 0 5%;
+    }
 
-    #icone_loupe
-    {
-        display: inline;
-        color: white;
+
+    /*main*/
+    .main_hotelsMarseille{
+        width: 100%;
     }
-    .filters{
+    .main_hotelsMarseille article{
         display: flex;
         flex-direction: column;
     }
-    .Hebergements_marseille article{
-        display: flex;
-        flex-direction: column;
-    }
-}
+}   
