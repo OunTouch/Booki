@@ -13,15 +13,20 @@
 /*il faut déclarer toutes les polices, example Arial, Trebuchet et PatinCoufin?*/
 
 
+/*body*/
+
 body
 {
     font-family: "Raleway", "Arial", "Comic Sans MS", "Trebuchet MS", "sans-serif";
-    margin: 0 5%;
-    width: 90%;
     min-width: 448px;
+    max-width: 1440px;
 }
 
 /*Header*/
+
+header{
+    margin: 0 5%;
+}
 
 .header_logo{
     display: flex;
@@ -129,7 +134,7 @@ header h1{
     margin: 0 15px;
 }
 .header_filters div:hover{
-    text-decoration: line-through;
+    box-shadow: 6px 6px 4px royalblue;
 }
 
 /*infos*/
@@ -153,84 +158,227 @@ header h1{
 }
 
 
+/*main*/
+main{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: red;
+}
+
 
 /*Hébergements à Marseille*/
 
-.main_hotelsMarseille{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    background-color: #F2F2F2;
-    border-radius: 10px;
-    width: 65%;
+.main_hotelsMarseille h1{
+    width: 100%;
 }
-.main_hotelsMarseille article{
+
+.main_hotelsMarseille{
+    flex: 2;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding: 10px;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    height: 30%;
 }
+
 .main_hotelsMarseille_card{
     background-color: white;
     border-radius: 20px;
     box-shadow: 6px -6px 6px rgb(140, 143, 131);
     margin: 5px;
-    width: 300px;
+    width: 30%;
     height: auto;
     padding: 1%;
+    padding-bottom: 5px;
+    min-width: 200px;
 }
-/*.main_hotelsMarseille_card_img_cannebiere{
-    background-image: url(../images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg);
-}*/
-.main_hotelsMarseille_card_img_port{
-    background-image: url(../images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg);
-}
-.main_hotelsMarseille_card_img_mouettes{
-    background-image: url(../images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg);
-}
-.main_hotelsMarseille_card_img_mer{
-    background-image: url(../images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg);
-}
-.main_hotelsMarseille_card_img_panier{
-    background-image: url(../images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg);
-}
-.main_hotelsMarseille_card_img_amina{
-    background-image: url(../images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg);
-}
-/*insertion img avec la propriété object-fit*/
+
 .main_hotelsMarseille img{
     object-fit: cover;
     object-position: center;
     width:100%;
-    height:120px;
+    height: 125px;
     border-radius: 15px 15px 0 0;
-}
-/*insertion img avec la propriété background-image*/
-.main_hotelsMarseille_card_img{
-    width: 100%;
-    height: 120px;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    background-size: cover;
-    background-position: center;
-    border-radius: 15px 15px 0 0;
-}
-.main_hotelsMarseille_card figcaption{
-    padding-left: 5px;
-    font-size: 20px;
-    font-weight: bold;
-}
+}    
+
 .main_hotelsMarseille_card p{
     padding-left: 5px;
+    margin: 5px 0px;
 }
 [class*="fa-star"]{
     padding-left: 5px;
     color: #0065FC;
 }
-.main_hotelsMarseille_card :last-child :not([class*="fa-euro-sign"]){
-    color: #F2F2F2;
+.main_hotelsMarseille>p{
+    width: 100%;
+    font-weight: bold;
 }
+
+/*les plus populaires*/
+.main_populaires{
+    flex: 1;
+    padding: 10px;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    margin-left: 20px;
+    height: 30%;
+    padding-bottom: 20px;
+}
+
+.main_populaires h1{
+    display: flex;
+    justify-content: space-between;
+}
+.main_populaires>h1>[class*="fa-star"]{
+    color: black;
+    font-size: 3vh;
+    display: flex;
+    align-items: center;
+}
+
+.main_populaires_card{
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 6px -6px 6px rgb(140, 143, 131);
+    width: 370px;
+    height: 30%;
+    padding: 1%;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.main_populaires_card img{
+    object-fit: cover;
+    object-position: center;
+    width: 40%;
+    height: 157px;
+    border-radius: 15px 0 0 15px;
+    float: left;
+    margin-right: 5px;
+}
+
+.main_populaires_card figcaption{
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.main_populaires_card p{
+    padding-left: 5px;
+}
+
+.main_populaires_card [class*="fa-star"]{
+    padding-top: 30px;
+    padding-left: 5px;
+}
+
+/*activités*/
+
+.main_activités div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 460px;
+}
+
+.main_activités_cardLarge{
+    width: 300px;
+    height: 460px;
+    border-radius: 15px;
+    box-shadow:0 0 20px #0000002e;
+}
+
+.main_activités_cardLarge img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 410px;
+    border-radius: 15px 15px 0 0;
+}
+
+.main_activités_cardMedium{
+    width: 300px;
+    height: 250px;
+    border-radius: 15px;
+    box-shadow: 0 3px 3px black;
+}
+
+.main_activités_cardMedium img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 210px;
+    border-radius: 15px 15px 0 0;
+}
+
+.main_activités_cardSmall{
+    width: 300px;
+    height: 150px;
+    border-radius: 15px;
+    box-shadow: 0 3px 3px black;
+}
+
+.main_activités_cardSmall img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100px;
+    border-radius: 15px 15px 0 0;
+}
+
+
+/*footer*/
+
+footer{
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    height: 150px;
+}
+
+footer article{
+    padding: 0 10% 0 5%;
+}
+
+footer article ul{
+    list-style: none;
+    padding-inline-start: 0;
+    margin-block-start: 0; 
+}
+
+footer article ul li{
+    padding: 5% 0;
+}
+
+
+/*classes générales*/
+.backGrey{
+    color: #DEEBFF;
+}
+
+figure{
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+figcaption{
+    padding-left: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.main_hotelsMarseille_card:hover, .main_populaires_card:hover{
+    transform: scale(105%);
+    transition: all 0.5s;
+}
+
+
 /*Responsive*/
 
 @media screen and (max-width: 768px)
@@ -240,7 +388,6 @@ header h1{
         margin: 0;
         width: 100%;
     }
-    /*body*/
 
     /*header*/
     .header_text{
@@ -287,11 +434,28 @@ header h1{
 
 
     /*main*/
-    .main_hotelsMarseille{
-        width: 100%;
-    }
-    .main_hotelsMarseille article{
+    main{
         display: flex;
         flex-direction: column;
+    }
+    .main_hotelsMarseille{
+        width: 100%;
+        order: 2;
+        background-color: white;
+    }
+    .main_hotelsMarseille article :not([class*="fa-star"]) :not([class*="fa-euro-sign"]){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .main_populaires{
+        width: 100%;
+        order: 1;
+        margin: 0 0 15px 0;
+        border-radius: 0%;
+    }
+    .main_activités{
+        order: 3;
+        width: 100%;
     }
 }   
