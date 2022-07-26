@@ -7,15 +7,15 @@
         <script src="https://kit.fontawesome.com/67673b6d3e.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
         <link rel="stylesheet" href="css/normalize.css" type="text/css" />
-        <link rel="stylesheet" href="css/stylesheet.css" type="text/css" />        
+        <link rel="stylesheet" href="css/stylesheet.css" type="text/css" /> 
     </head>
     <body>
         <header>
             <div class="header_logo">
                 <img src="images/logo/Booki.png" alt="le logo du site" class="header_logo_image" />
                 <nav>
-                        <a href="#">Hébergements</a>
-                        <a href="#">Activités</a>
+                        <a href="#main_hotelsMarseille">Hébergements</a>
+                        <a href="#main_activités">Activités</a>
                 </nav>
             </div>
             <div class="header_text">
@@ -33,9 +33,7 @@
                 </form>
             </div>
             <section class="header_filters">
-                <h2>Filtres</h2>
-                <!--faire un <ul> ou non?-->
-                <!--KISS-->   
+                <h2>Filtres</h2>  
                 <div class="header_buttons">
                     <i class="fa-solid fa-money-bill-wave"></i>
                     <button type="button">Economique</button>
@@ -61,7 +59,7 @@
             </section>
         </header>
         <main>
-            <section class="main_hotelsMarseille">
+            <section class="main_hotelsMarseille" id="main_hotelsMarseille">
                 <h1>Hébergements à Marseille</h1>
                 <article class="main_hotelsMarseille_card">
                     <figure class="main_hotelsMarseille_card_img main_hotelsMarseille_card_img_cannebiere">
@@ -163,7 +161,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star backGrey"></i>
                 </article>
                 <article class="main_populaires_card">
                     <figure>
@@ -175,10 +173,10 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star backGrey"></i>
                 </article>
             </section> 
-            <section class="main_activités">
+            <section class="main_activités" id="main_activités">
                 <h1>Activités à Marseille</h1>
                 <div>
                     <article class="main_activités_cardLarge">
