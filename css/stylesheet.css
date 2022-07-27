@@ -194,7 +194,6 @@ main{
     height: auto;
     padding: 1%;
     padding-bottom: 5px;
-
 }
 
 .main_hotelsMarseille img{
@@ -260,6 +259,7 @@ main{
     height: 160px;
     border-radius: 15px 0 0 15px;
     float: left;
+    clip-path: stroke-box;
 }
 
 .main_populaires_card figcaption{
@@ -281,14 +281,19 @@ main{
 
 .main_activités{
     width: 100%;
-    display: none;
 }
 .main_activités div{
     height: 460px;
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+    column-gap: 1%;
+
+    /****Mise en pages activités avec flex et grid****/
+    /*display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between;*/
     /*display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -297,8 +302,14 @@ main{
     align-content: space-between;*/
 }
 
+.main_activités div div:nth-child(even){
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
 .main_activités_cardLarge{
-    width: 300px;
+    min-width: 200px;
     height: 460px;
     border-radius: 15px;
     box-shadow:0 0 20px #0000002e;
@@ -314,7 +325,7 @@ main{
 }
 
 .main_activités_cardMedium{
-    width: 300px;
+    min-width: 200px;
     height: 250px;
     border-radius: 15px;
     box-shadow:0 0 20px #0000002e;
@@ -329,7 +340,7 @@ main{
 }
 
 .main_activités_cardSmall{
-    width: 300px;
+    min-width: 200px;
     height: 150px;
     border-radius: 15px;
     box-shadow:0 0 20px #0000002e;
@@ -430,12 +441,21 @@ figcaption{
         background-color: white;
        }
 
+       .main_hotelsMarseille_card{
+        box-shadow:0 0 20px #0000002e;
+       }
+
        .main_populaires{
         order: 1;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         width: 100%;
+       }
+
+       .main_activités{
+        order:3;
+
        }
 }
 @media screen and (max-width: 768px)
@@ -463,6 +483,7 @@ figcaption{
     }
     .header_searchbar_search{
         width: 50px;
+        border-radius: 20px;
     }
     .header_searchbar_search a{
         display: none;
@@ -504,6 +525,7 @@ figcaption{
     .main_hotelsMarseille_card{
         width: 90%;
         height: auto;
+        box-shadow:0 0 20px #0000002e;
     }
     .main_populaires{
         width: 100%;
@@ -511,9 +533,45 @@ figcaption{
         margin: 0 0 15px 0;
         border-radius: 0%;
     }
+
+    .main_populaires_card{
+        margin: 5px;
+    }
     .main_activités{
         order: 3;
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .main_activités div{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        column-gap: 0;
+    }
+    
+    .main_activités_cardLarge, .main_activités_cardMedium, .main_activités_cardSmall{
+        background-color: white;
+        border-radius: 20px;
+        margin: auto;
+        width: 90%;
+        height: auto;
+        padding-bottom: 5px;
+        margin: 5px;
+        box-shadow:0 0 20px #0000002e;
+    }
+
+    .main_activités_cardLarge img, .main_activités_cardMedium img, .main_activités_cardSmall img{
+        object-fit: cover;
+        object-position: center;
+        width:100%;
+        height: 125px;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .main_activités div div:nth-child(even){
+        display: block;
     }
 
     /*footer*/
