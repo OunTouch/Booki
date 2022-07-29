@@ -63,9 +63,10 @@ header h1{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    width: 400px;
+    width:fit-content;
     height: auto;
     border-radius: 10px;
+    border: #F2F2F2 2px solid;
 }
 .header_searchbar_icon{
     height: 50px;
@@ -84,7 +85,7 @@ header h1{
     font-weight: bold;
     outline:none;
     padding-left: 10px;
-    border: #F2F2F2 2px solid;
+    border: none;
 }
 .header_searchbar_search{
     width: 120px;
@@ -100,7 +101,7 @@ header h1{
     color: white;
     font-size: 18px;
 }
-.header__searchbar_iconGlass{
+.header_searchbar_iconGlass{
     display: none;
 }
 
@@ -111,30 +112,30 @@ header h1{
     flex-wrap: wrap;
     align-items: center;
 }
-.header_buttons{
+
+.header_filters button{
     display: flex;
     align-items: center;
-    margin-left: 15px;
-    height: 50px;
+    background-color: white;
+    margin: 0 15px;
     border: 2px solid #F2F2F2;
     border-radius: 30px;
+    height: 50px;
+    width: auto;
 }
-.header_buttons i{
+
+.header_filters button i{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50px;
-    height: 50px;
+    height: inherit;
     background-color: #DEEBFF;
     color: #0065FC;
     border-radius: 100%;
+    margin-right: 10px;
 }
-.header_buttons button{
-    border: none;
-    background-color: white;/*il vaut mieux un <button> oun une <div>?*/
-    margin: 0 15px;
-}
-.header_filters div:hover{
+.header_filters button:hover{
     box-shadow: 6px 6px 4px royalblue;
 }
 
@@ -488,7 +489,7 @@ figcaption{
     .header_searchbar_search a{
         display: none;
     }
-    .header__searchbar_iconGlass{
+    .header_searchbar_iconGlass{
         display: inline;
         color: white;
     }

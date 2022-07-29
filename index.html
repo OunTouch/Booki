@@ -21,40 +21,24 @@
             <div class="header_text">
                 <h1>Trouvez votre hébergement pour des vacances de rêves</h1>
                 <p>En plein centre ville ou en pleine nature</p>
-                <form method="post" action="traitement.php" class="header_searchbar">
-                    <div class="header_searchbar_icon">
-                        <i class="fa-solid fa-location-dot"></i>
-                    </div>
+                <form method="post" action="traitement.php" class="header_searchbar" >
+                    <i class="fa-solid fa-location-dot header_searchbar_icon"></i>
                     <input type="search" name="location" class="header_searchbar_location" placeholder="Marseille, France" />  
-                    <div  class="header_searchbar_search">
-                        <label for="location"><a href="#">Rechercher</a></label>
-                        <i class="fa-solid fa-magnifying-glass header__searchbar_iconGlass"></i>
-                    </div>
+                    <label for="location" class="header_searchbar_search">
+                        <a href="#">Rechercher</a>
+                        <i class="fa-solid fa-magnifying-glass header_searchbar_iconGlass"></i>
+                    </label>
                 </form>
             </div>
             <section class="header_filters">
                 <h2>Filtres</h2>  
-                <div class="header_buttons">
-                    <i class="fa-solid fa-money-bill-wave"></i>
-                    <button type="button">Economique</button>
-                </div>
-                 <div class="header_buttons">
-                    <i class="fa-solid fa-child-reaching"></i>
-                    <button type="button">Familial</button>
-                </div>     
-                <div class="header_buttons">
-                    <i class="fa-solid fa-heart"></i>
-                    <button type="button">Romantique</button>
-                </div>
-                <div class="header_buttons">
-                    <i class="fa-solid fa-dog"></i>
-                    <button type="button">Animaux autorisés</button>
-                </div>
+                <button type="button"><i class="fa-solid fa-money-bill-wave"></i>Economique</button>
+                <button type="button"><i class="fa-solid fa-child-reaching"></i>Familial</button>
+                <button type="button"><i class="fa-solid fa-heart"></i>Romantique</button>    
+                <button type="button"><i class="fa-solid fa-dog"></i>Animaux autorisés</button>                 
             </section>
             <section class="header_info"> 
-                <div class="header_info_icon">
-                    <i class="fa-solid fa-info"></i>
-                </div>         
+                <i class="fa-solid fa-info header_info_icon"></i>
                 <p>Plus de 500 logements sont disponibles dans cette ville</p>
             </section>
         </header>
