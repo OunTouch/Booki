@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <title>Booki</title>
         <meta charset="utf-8" />
@@ -21,9 +21,9 @@
             <div class="header_text">
                 <h1>Trouvez votre hébergement pour des vacances de rêves</h1>
                 <p>En plein centre ville ou en pleine nature</p>
-                <form method="post" action="traitement.php" class="header_searchbar" >
-                    <i class="fa-solid fa-location-dot header_searchbar_icon"></i>
-                    <input type="search" name="location" class="header_searchbar_location" placeholder="Marseille, France" />  
+                <form method="post" action="traitement.php" class="header_searchbar">
+                    <i class="fa-solid fa-location-dot header_searchbar_icon"></i> 
+                    <input type="search" name="location" id="location" class="header_searchbar_location" placeholder="Marseille, France" /> 
                     <label for="location" class="header_searchbar_search">
                         <a href="#">Rechercher</a>
                         <i class="fa-solid fa-magnifying-glass header_searchbar_iconGlass"></i>
@@ -46,76 +46,100 @@
             <section class="main_hotelsMarseille" id="main_hotelsMarseille">
                 <h1>Hébergements à Marseille</h1>
                 <article class="main_hotelsMarseille_card">
-                    <figure class="main_hotelsMarseille_card_img main_hotelsMarseille_card_img_cannebiere">
+                    <figure>
                         <img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="chambre avec deux lits superposés" />
+                        <figcaption>
+                            <h2>Auberge La Cannebière</h2>
+                            <p>Nuit à partir de 25<i class="fa-solid fa-euro-sign"></i></p>
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star backGrey"></i>
+                            </div>
+                        </figcaption>
                     </figure>
-                    <figcaption>Auberge La Cannebière</figcaption>
-                    <p>Nuit à partir de 25<i class="fa-solid fa-euro-sign"></i></p>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star backGrey"></i>
                 </article>
                 <article class="main_hotelsMarseille_card">
-                    <figure class="main_hotelsMarseille_card_img main_hotelsMarseille_card_img_port">
+                    <figure>
                         <img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="chambre avec deux lits" />
+                        <figcaption>
+                            <h2>Hôtel du port</h2>
+                            <p>Nuit à partir de 52<i class="fa-solid fa-euro-sign"></i></p>
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </figcaption>
                     </figure>
-                    <figcaption>Hôtel du port</figcaption>
-                    <p>Nuit à partir de 52<i class="fa-solid fa-euro-sign"></i></p>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
                 </article>
                 <article class="main_hotelsMarseille_card">
-                    <figure class="main_hotelsMarseille_card_img main_hotelsMarseille_card_img_mouettes">
+                    <figure>
                         <img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="chambre avec un lit et un placard" />
+                        <figcaption>
+                            <h2>Hôtel Les mouettes</h2>
+                            <p>Nuit à partir de 76<i class="fa-solid fa-euro-sign"></i></p>
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star backGrey"></i>
+                            </div>
+                        </figcaption>
                     </figure>
-                    <figcaption>Hôtel Les mouettes</figcaption>
-                    <p>Nuit à partir de 76<i class="fa-solid fa-euro-sign"></i></p>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star backGrey"></i>
                 </article>
                 <article class="main_hotelsMarseille_card">
-                    <figure class="main_hotelsMarseille_card_img main_hotelsMarseille_card_img_mer">
+                    <figure>
                         <img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="chambre avec un lit double et une peinture marine au-dessus" />
+                        <figcaption>
+                            <h2>Hôtel de la mer</h2>
+                            <p>Nuit à partir de 46<i class="fa-solid fa-euro-sign"></i></p>
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star backGrey"></i>
+                                <i class="fa-solid fa-star backGrey"></i>
+                            </div>
+                        </figcaption>
                     </figure>
-                    <figcaption>Hôtel de la mer</figcaption>
-                    <p>Nuit à partir de 46<i class="fa-solid fa-euro-sign"></i></p>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star backGrey"></i>
-                    <i class="fa-solid fa-star backGrey"></i>
                 </article>
                 <article class="main_hotelsMarseille_card">
-                    <figure class="main_hotelsMarseille_card_img main_hotelsMarseille_card_img_panier">
+                    <figure>
                          <img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="chambre avec deux fois deux lits superposés" />
+                         <figcaption>
+                            <h2>Auberge Le Panier</h2>
+                            <p>Nuit à partir de 23<i class="fa-solid fa-euro-sign"></i></p>
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star backGrey"></i>
+                            </div>
+                        </figcaption>
                     </figure>
-                    <figcaption>Auberge Le Panier</figcaption>
-                    <p>Nuit à partir de 23<i class="fa-solid fa-euro-sign"></i></p>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star backGrey"></i>
                 </article>
                 <article class="main_hotelsMarseille_card">
-                    <figure class="main_hotelsMarseille_card_img main_hotelsMarseille_card_img_amina">
+                    <figure>
                         <img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="chambre avec un lit et une table" />
+                        <figcaption>
+                            <h2>Hôtel chez Amina</h2>
+                            <p>Nuit à partir de 96<i class="fa-solid fa-euro-sign"></i></p>
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </figcaption>
                     </figure>
-                    <figcaption>Hôtel chez Amina</figcaption>
-                    <p>Nuit à partir de 96<i class="fa-solid fa-euro-sign"></i></p>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
                 </article>
                 <p>Afficher plus</p>
             </section>
@@ -123,48 +147,62 @@
                 <h1>Les plus populaires
                     <i class="fa-solid fa-star"></i>
                 </h1>
-                <article class="main_populaires_card">
-                    <figure>
-                        <img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="une chambre avec un lit double">
-                    </figure>
-                    <figcaption>
-                        Hôtel Le soleil du matin
-                        <p>Nuit à partir de 128<i class="fa-solid fa-euro-sign"></i></p>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </figcaption> 
-                </article>
-                <article class="main_populaires_card">
-                    <figure>
-                        <img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="une chambre avec un lit double">
-                    </figure>
-                    <figcaption>Au coeur de l'eau<br />Chambres d'hôtes
-                                <p>Nuit à partir de 71<i class="fa-solid fa-euro-sign"></i></p>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star backGrey"></i>
-                    </figcaption>
-                </article>
-                <article class="main_populaires_card">
-                    <figure>
-                        <img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="une chambre avec un lit double">
-                    </figure>
-                    <figcaption>Hôtel Tout bleu et Blanc
-                                <p>Nuit à partir de 128<i class="fa-solid fa-euro-sign"></i></p>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star backGrey"></i>
-                    </figcaption>
-            
-                    
-                </article>
+                <div>
+                    <article class="main_populaires_card">
+                        <figure>
+                            <img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="une chambre avec un lit double">
+                            <figcaption>
+                                <div>
+                                    <h2>Hôtel Le soleil du matin</h2>
+                                    <p>Nuit à partir de 128<i class="fa-solid fa-euro-sign"></i></p>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </figcaption> 
+                        </figure>
+                    </article>
+                    <article class="main_populaires_card">
+                        <figure>
+                            <img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="une chambre avec un lit double">
+                            <figcaption>
+                                <div>
+                                    <h2>Au coeur de l'eau<br />Chambres d'hôtes</h2>
+                                    <p>Nuit à partir de 71<i class="fa-solid fa-euro-sign"></i></p>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star backGrey"></i>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="main_populaires_card">
+                        <figure>
+                            <img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="une chambre avec un lit double">
+                            <figcaption>
+                                <div>
+                                    <h2>Hôtel Tout bleu et Blanc</h2>
+                                    <p>Nuit à partir de 128<i class="fa-solid fa-euro-sign"></i></p>  
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star backGrey"></i>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </div>
             </section> 
             <section class="main_activités" id="main_activités">
                 <h1>Activités à Marseille</h1>
@@ -173,44 +211,44 @@
                         <article class="main_activités_cardLarge">
                             <figure>
                                 <img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="le vieux port de marseille" />
+                                <figcaption><h2>Vieux Port</h2></figcaption>
                             </figure>
-                            <figcaption>Vieux Port</figcaption>
                         </article>
                     </div>
                     <div>
                         <article class="main_activités_cardMedium">
                             <figure>
                                 <img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="un fort en haut d'une colline" />
+                                <figcaption><h2>Fort de Pomègues</h2></figcaption>
                             </figure>
-                            <figcaption>Fort de Pomègues</figcaption>
                         </article>
                         <article class="main_activités_cardSmall">
                             <figure>
                                 <img src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="une ile et la mer" />
+                                <figcaption><h2>Îles du Frioul</h2></figcaption>
                             </figure>
-                            <figcaption>Iles du Frioul</figcaption>
                         </article>
                     </div>
                     <div>
                         <article class="main_activités_cardLarge">
                             <figure>
                                 <img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="les calanques de marseille" />
+                                <figcaption><h2>Parc National des Calanques</h2></figcaption>
                             </figure>
-                            <figcaption>Parc National des Calanques</figcaption>
                         </article>
                     </div>
                     <div>
                         <article class="main_activités_cardSmall">
                             <figure>
                                 <img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="une église sur une colline" />
+                                <figcaption><h2>Notre-Dame-de-la-Garde</h2></figcaption>
                             </figure>
-                            <figcaption>Notre-Dame-de-la-Garde</figcaption>
                         </article>
                         <article class="main_activités_cardMedium">
                             <figure>
                                 <img src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="un monuments à colonnes" />
+                                <figcaption><h2>Parc Longchamp</h2></figcaption>
                             </figure>
-                            <figcaption>Parc Longchamp</figcaption>
                         </article>
                     </div>
                 </div>

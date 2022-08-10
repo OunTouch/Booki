@@ -1,11 +1,9 @@
 /** Déclarations **/
 
 
-
 *, ::before, ::after{
     box-sizing: border-box;
 }
-/* Ajouter border-box à tous les éléments*/
 
 @font-face {
     font-family: "Raleway";
@@ -59,20 +57,24 @@ header nav a:hover{
 header h1{
     font-size: 25px;
 }
+
+.header_text
+
+/*Barre de recherche*/
+
 .header_searchbar{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    width:fit-content;
-    height: auto;
-    border-radius: 10px;
-    border: #F2F2F2 2px solid;
+    width: fit-content;
+    height: fit-content;
+    margin: 5px 0 0 0;
 }
 .header_searchbar_icon{
     height: 50px;
     width: 50px;
     background-color: #F2F2F2;
-    border-radius: 5px 0 0 5px;
+    border-radius: 10px 0 0 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,6 +88,8 @@ header h1{
     outline:none;
     padding-left: 10px;
     border: none;
+    border-bottom: #F2F2F2 2px solid;
+    border-top: #F2F2F2 2px solid;
 }
 .header_searchbar_search{
     width: 120px;
@@ -113,11 +117,16 @@ header h1{
     align-items: center;
 }
 
+.header_filters h2, .header_filters button{
+    margin: 5px 0;
+}
+
 .header_filters button{
     display: flex;
     align-items: center;
     background-color: white;
-    margin: 0 15px;
+    margin-left: 15px;
+    margin-right: 15px;
     border: 2px solid #F2F2F2;
     border-radius: 30px;
     height: 50px;
@@ -145,6 +154,7 @@ header h1{
 .header_info{
     display: flex;
     align-items: baseline;
+    margin: 5px 0 15px 0;
 }
 .header_info_icon{
     width: 25px;
@@ -174,6 +184,7 @@ main{
 
 .main_hotelsMarseille h1{
     width: 100%;
+    padding-left: 10px;
 }
 
 .main_hotelsMarseille{
@@ -181,21 +192,17 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 10px;
     background-color: #F2F2F2;
     border-radius: 10px;
-    height: 35%;
-    min-height: 750px;
+    height: 700px;
 }
 
 .main_hotelsMarseille_card{
     background-color: white;
     border-radius: 20px;
-    margin: 5px;
     width: 30%;
-    height: auto;
+    height: 250px;
     padding: 1%;
-    padding-bottom: 5px;
 }
 
 .main_hotelsMarseille img{
@@ -206,31 +213,33 @@ main{
     border-radius: 15px 15px 0 0;
 }    
 
-.main_hotelsMarseille_card p{
-    padding-left: 5px;
-    margin: 5px 0px;
+.main_hotelsMarseille_card figcaption{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
-[class*="fa-star"]{
-    padding-left: 5px;
-    color: #0065FC;
+
+.main_hotelsMarseille h2{
+    white-space: nowrap;
+    overflow: hidden;
 }
+
 .main_hotelsMarseille>p{
     width: 100%;
     font-weight: bold;
+    padding: 10px 0 10px 10px;
 }
+
+
 
 /*les plus populaires*/
 .main_populaires{
     width: 33%;
-    padding: 10px;
+    padding: 0 10px;
     background-color: #F2F2F2;
     border-radius: 10px;
-    height: 35%;
-    min-height: 750px;
-    padding-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    height: 700px;
 }
 
 .main_populaires h1{
@@ -244,47 +253,42 @@ main{
     align-items: center;
 }
 
+.main_populaires>div{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .main_populaires_card{
     background-color: white;
     border-radius: 20px;
     width: 90%;
     height: 170px;
-    padding: 1%;
     margin: auto;
-    display: flex;
 }
 
 .main_populaires_card figure{
-    width: 200px;
-    height: 100%;
+    display: flex;
+    flex-direction: row;
+    height: inherit;
+    padding: 1%;
 }
+
 .main_populaires_card img{
     object-fit: cover;
     object-position: center;
-    width: 100%;
+    width: 180px;
     height: 100%;
     border-radius: 15px 0 0 15px;
 }
 
 .main_populaires_card figcaption{
-    width: 60%;
-    height: fit-content;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
 }
-    /*display: grid;
-    grid-template-rows: 30% 2fr 1fr;
-}
-
-.main_populaires_card figcaption p{
-    grid-row: 2;
-}
-
-.main_populaires figcaption i:not(.fa-euro-sign){
-    grid-row: 3;
-    background-color: #00fcb0;
-}*/
-
-
-
 
 /*activités*/
 
@@ -292,23 +296,11 @@ main{
     width: 100%;
 }
 .main_activités div{
-    height: 460px;
+    height: 430px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    column-gap: 1%;
-
-    /****Mise en pages activités avec flex et grid****/
-    /*display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;*/
-    /*display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-auto-flow: column;
-    justify-content: space-between;
-    align-content: space-between;*/
+    column-gap: 3%;
 }
 
 .main_activités div div:nth-child(even){
@@ -317,25 +309,36 @@ main{
     align-content: space-between;
 }
 
+.main_activités div div{
+    width: 23%;
+}
+
+.main_activités div div article{
+    width: 100%;
+}
+
 .main_activités_cardLarge{
-    min-width: 200px;
-    height: 460px;
+    height: auto;
     border-radius: 15px;
     box-shadow:0 0 20px #0000002e;
-    /*grid-row: 1 / 3;*/
 }
 
 .main_activités_cardLarge img{
     object-fit: cover;
     object-position: center;
     width: 100%;
-    height: 410px;
+    height: 380px;
     border-radius: 15px 15px 0 0;
+}
+
+.main_activités_cardLarge h2{
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .main_activités_cardMedium{
     min-width: 200px;
-    height: 250px;
+    height: auto;
     border-radius: 15px;
     box-shadow:0 0 20px #0000002e;
 }
@@ -344,13 +347,13 @@ main{
     object-fit: cover;
     object-position: center;
     width: 100%;
-    height: 210px;
+    height: 190px;
     border-radius: 15px 15px 0 0;
 }
 
 .main_activités_cardSmall{
     min-width: 200px;
-    height: 150px;
+    height: auto;
     border-radius: 15px;
     box-shadow:0 0 20px #0000002e;
 }
@@ -359,10 +362,13 @@ main{
     object-fit: cover;
     object-position: center;
     width: 100%;
-    height: 100px;
+    height: 90px;
     border-radius: 15px 15px 0 0;
 }
 
+.main_activités figcaption{
+    padding-bottom: 5px;
+}
 
 /*footer*/
 
@@ -373,6 +379,7 @@ footer{
     width: 100%;
     height: auto;
     bottom: 0;
+    padding-top: 20px;
 }
 
 footer article{
@@ -386,16 +393,21 @@ footer article ul{
 }
 
 footer article ul li{
-    padding: 5% 0;
+    padding: 15px 0 5px 0;
 }
 
 
 
 /*classes générales*/
 
+[class*="fa-star"]{
+    color: #0065FC;
+}
+
 .backGrey{
     color: #DEEBFF;
 }
+
 
 figure{
     margin-inline-start: 0px;
@@ -405,14 +417,24 @@ figure{
 }
 
 figcaption{
-    padding-left: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+h2{
     font-size: 20px;
     font-weight: bold;
     margin-top: 5px;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
-.main_hotelsMarseille_card:hover, .main_populaires_card:hover{
-    transform: scale(105%);
+p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.main_hotelsMarseille_card:hover, .main_populaires_card:hover, .main_activités_cardLarge:hover, .main_activités_cardMedium:hover, .main_activités_cardSmall:hover{
+    transform: scale(1.1);
     transition: all 0.5s;
 }
 
@@ -421,14 +443,52 @@ figcaption{
 
 @media screen and (min-width: 992px) and (max-width: 1400px) 
 {
-    body{
-        font-size: 72%;
-    }
         /*filtres*/
 
         .header_filters{
             margin-top: 20px;
         }
+
+        /*main*/
+
+        main{
+            display: flex;
+            flex-direction: column;
+        }
+
+        main section{
+            margin: 20px 0;
+        }
+
+        .main_populaires{
+            order: 1;
+            width: 100%;
+            height: fit-content;
+            min-height: 0;
+        }
+
+        .main_populaires div{
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .main_populaires_card{
+            width: 450px;
+            margin-bottom: 10px;
+        }
+
+
+        .main_hotelsMarseille{
+            order: 2;
+            width: 100%;
+            height: fit-content;
+        }
+
+        .main_activités{
+            order: 3;
+        }
+        
     
 }
 
@@ -455,22 +515,67 @@ figcaption{
        }
 
        .main_populaires{
-        order: 1;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
+            order: 1;
+            width: 100%;
+            height: auto;
+       }
+
+       .main_populaires>div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+       }
+
+       .main_populaires_card{
+            margin: 5px auto;
+       }
+       .main_populaires_card img{
+            width: 40%;
        }
 
        .main_activités{
-        order:3;
-
+            order:3;
+            height: fit-content;
        }
+
+       .main_activités h1{
+            padding-left: 5%;
+       }
+
+       .main_activités div{
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+       }
+
+       .main_activités div div{
+            width: 100%;
+            height: auto;
+       }
+       .main_activités div div article{
+            width: 90%;
+            height: auto;
+            margin: 10px auto;
+       }
+
+       .main_activités_cardLarge img, .main_activités_cardMedium img, .main_activités_cardSmall img{
+            object-fit: cover;
+            object-position: center;
+            width:100%;
+            height: 125px;
+            border-radius: 15px 15px 0 0;
+        }
+       
 }
 @media screen and (max-width: 768px)
 {
 
     /*header*/
+
+    header{
+        margin: 0;
+    }
     .header_text{
         padding: 0 5%;
     }
@@ -490,26 +595,45 @@ figcaption{
         border-top: none;
         border-bottom: 1px solid #0065FC;
     }
+
+    .header_searchbar{
+        border-top: #F2F2F2 2px solid;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 20px;
+        border-bottom: #F2F2F2 2px solid;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 20px;
+    }
+    .header_searchbar_location{
+        border: none;
+    }
+
     .header_searchbar_search{
         width: 50px;
         border-radius: 20px;
     }
+
     .header_searchbar_search a{
         display: none;
     }
+
     .header_searchbar_iconGlass{
         display: inline;
         color: white;
     }
+
     .header_filters{
         padding: 0 5%;
     }
+
     header h2{
         width: 100%;
     }
+
     .header_buttons{
         margin-top: 7px;
     }
+
     .header_info{
         padding: 0 5%;
     }
@@ -523,10 +647,11 @@ figcaption{
     }
     .main_hotelsMarseille{
         width: 100%;
+        height: fit-content;
         order: 2;
         background-color: white;
     }
-    .main_hotelsMarseille article :not([class*="fa-star"]) :not([class*="fa-euro-sign"]){
+    .main_hotelsMarseille article{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -535,39 +660,61 @@ figcaption{
         width: 90%;
         height: auto;
         box-shadow:0 0 20px #0000002e;
+        margin: 5px 0;
+    }
+    .main_hotelsMarseille_card div{
+        display: flex;
     }
     .main_populaires{
         width: 100%;
+        height: fit-content;
         order: 1;
         margin: 0 0 15px 0;
         border-radius: 0%;
+        padding: 0;
+    }
+
+    .main_populaires h1{
+        padding: 0 10px;
     }
 
     .main_populaires_card{
-        margin: 5px;
+        width: 90%;
+        margin: 5px auto;
     }
     .main_activités{
         order: 3;
         display: flex;
         flex-direction: column;
-        padding: 10px;
+    }
+
+    .main_activités h1{
+        padding-left: 10px;
     }
 
     .main_activités div{
         display: flex;
         flex-direction: column;
+        width: 100%;
         height: auto;
         column-gap: 0;
     }
     
+    .main_activités div div{
+        width: 100%;
+        height: auto;
+    }
+
+    .main_activités div div article{
+        width: 90%;
+    }
+
     .main_activités_cardLarge, .main_activités_cardMedium, .main_activités_cardSmall{
         background-color: white;
         border-radius: 20px;
-        margin: auto;
-        width: 90%;
         height: auto;
         padding-bottom: 5px;
-        margin: 5px;
+        margin: 5px auto;
         box-shadow:0 0 20px #0000002e;
     }
 
@@ -577,10 +724,6 @@ figcaption{
         width:100%;
         height: 125px;
         border-radius: 15px 15px 0 0;
-    }
-
-    .main_activités div div:nth-child(even){
-        display: block;
     }
 
     /*footer*/
